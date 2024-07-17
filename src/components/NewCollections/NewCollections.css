@@ -1,0 +1,87 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 0; /* Added to remove default margin */
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #252525; /* Changed 'background' to 'background-color' */
+    border: none; /* Removed if not needed */
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+    margin-top: 50px; /* Adds space above the grid */
+    gap: 30px; /* Defines the gap between grid items */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .new-collections h1 {
+        font-size: 40px;
+    }
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns */
+        gap: 25px; /* Adjusts gap */
+    }
+}
+
+@media (max-width: 992px) {
+    .new-collections h1 {
+        font-size: 35px;
+    }
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* Adjusts to 2 columns */
+        gap: 20px; /* Adjusts gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .new-collections h1 {
+        font-size: 30px;
+    }
+    .new-collections hr {
+        width: 150px; /* Adjusts width of hr */
+    }
+    .collections {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Adjusts gap */
+    }
+}
+
+@media (max-width: 576px) {
+    .new-collections h1 {
+        font-size: 25px;
+    }
+    .new-collections hr {
+        width: 100px; /* Further adjusts width of hr */
+    }
+    .collections {
+        gap: 10px; /* Further adjusts gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .new-collections h1 {
+        font-size: 22px;
+    }
+    .new-collections hr {
+        width: 80px; /* Further adjusts width of hr */
+    }
+    .collections {
+        gap: 8px; /* Further adjusts gap */
+    }
+}
